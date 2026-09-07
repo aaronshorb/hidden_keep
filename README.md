@@ -1,9 +1,9 @@
 # Hidden Keep
 
-> A local multiplayer board game built in Rust with [macroquad](https://macroquad.rs/). <br>
+A local multiplayer board game built in Rust with [macroquad](https://macroquad.rs/). <br>
 Players place hidden walls, then race around the board collecting tokens. Hitting a hidden wall sends the player back to their starting space.
 
-![Gameplay Screenshot](assets/screenshot/gameplay_screenshot.png)
+![Gameplay Gif](assets/screenshot/gameplay_gif.gif)
 
 ## Features
 

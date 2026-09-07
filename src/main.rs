@@ -1,5 +1,6 @@
 //! Application entry point, asset setup, main loop, and top-level UI routing.
 
+use lerp::num_traits::ToPrimitive;
 use ::rand::prelude::*;
 use gui::skin::GuiStyle;
 use macroquad::prelude::*;
@@ -16,13 +17,16 @@ mod token;
 mod wall;
 mod wall_placement;
 use crate::assets::Assets;
-use crate::config::{conf, INITIAL_POS, MAX_WALLS, SKIP_POS};
+use crate::config::{INITIAL_POS, MAX_WALLS, SKIP_POS, WINDOW_HEIGHT, WINDOW_WIDTH, conf};
 use crate::game_data::PostGameChoice;
 use game_state::Game;
 use game_state::GameState;
 
 #[macroquad::main(conf)]
 async fn main() {
+    request_new_screen_size(WINDOW_WIDTH as f32, WINDOW_HEIGHT as f32);
+    next_frame().await;
+
     let mut rng = thread_rng();
 
     let assets = Assets::load().await;

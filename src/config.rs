@@ -8,14 +8,14 @@ pub fn conf() -> Conf {
         window_width: WINDOW_WIDTH,
         window_height: WINDOW_HEIGHT,
         fullscreen: false,
-        window_resizable: false,
+        window_resizable: true,
         ..Default::default()
     }
 }
 
 //Window configuration used by macroquad when creating the app window.
-pub const WINDOW_WIDTH: i32 = 1480;
-pub const WINDOW_HEIGHT: i32 = 1060;
+pub const WINDOW_WIDTH: i32 = 1400;
+pub const WINDOW_HEIGHT: i32 = 1000;
 
 //Board grid counts. These describe the 6x6 playable grid and its wall slots.
 pub const GAMEBOARD_SIZE: i32 = 6;
